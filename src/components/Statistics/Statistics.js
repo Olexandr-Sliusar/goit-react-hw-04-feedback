@@ -2,8 +2,6 @@ import { Notification } from '../Notification/Notification';
 import { Statistics } from './Statistics.styled';
 
 export const StatisticsData = ({ stats }) => {
-  console.dir(stats);
-  console.log(stats.good);
   return (
     <Statistics>
       <h2>Statistics</h2>

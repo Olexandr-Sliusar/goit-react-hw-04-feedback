@@ -3,11 +3,6 @@ import { StatisticsData } from '../Statistics/Statistics';
 import { CgSmile, CgSmileNone, CgSmileSad } from 'react-icons/cg';
 
 export const Feedback = ({ stats, onClick }) => {
-  // console.dir(stats);
-  // console.log(stats);
-  // console.log(stats.stats.good);
-  // stats.good = 1;
-  // stats.bad = 1;
   return (
     <Container>
       <h2>Please leave feedback</h2>
@@ -23,9 +18,6 @@ export const Feedback = ({ stats, onClick }) => {
         </button>
       </Controls>
       <StatisticsData stats={stats} />
-      {/* {Boolean(stats.good || stats.neutral || stats.bad) && (
-        <StatisticsData stats={stats} />
-      )} */}
     </Container>
   );
 };
