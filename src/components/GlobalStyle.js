@@ -24,5 +24,7 @@ code {
   -webkit-box-align: center;
   font-size: 16px;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 `;
