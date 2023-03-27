@@ -1,5 +1,6 @@
 import { Controls } from './FeedbackOptions.styled';
 import { CgSmile, CgSmileNone, CgSmileSad } from 'react-icons/cg';
+import PropTypes from 'prop-types';
 
 export const FeedbackOptions = ({ onLeaveFeedback, options, children }) => {
   return (
@@ -21,4 +22,10 @@ export const FeedbackOptions = ({ onLeaveFeedback, options, children }) => {
       {children}
     </>
   );
+};
+
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  children: PropTypes.node,
 };

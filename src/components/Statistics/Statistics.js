@@ -1,5 +1,5 @@
-import { Notification } from '../Notification/Notification';
 import { StatsContainer } from './Statistics.styled';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({
   good,
@@ -7,21 +7,22 @@ export const Statistics = ({
   bad,
   total,
   positivePercentage,
-  message,
 }) => {
   return (
     <StatsContainer>
-      {total ? (
-        <>
-          <p>Good: {good}</p>
-          <p>Neutral: {neutral}</p>
-          <p>Bad: {bad}</p>
-          <p>Total: {total}</p>
-          <p>Positive feedback: {positivePercentage}%</p>
-        </>
-      ) : (
-        <Notification message={message} />
-      )}
+      <p>Good: {good}</p>
+      <p>Neutral: {neutral}</p>
+      <p>Bad: {bad}</p>
+      <p>Total: {total}</p>
+      <p>Positive feedback: {positivePercentage}%</p>
     </StatsContainer>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
 };
